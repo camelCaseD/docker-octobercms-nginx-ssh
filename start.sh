@@ -1,10 +1,5 @@
 #!/bin/bash
-if [ ! -d /usr/share/nginx/html/storage/temp/ ]; then
-  
-  mkdir /usr/share/nginx/html/storage/temp/
-  chown -R www-data:www-data /usr/share/nginx/html/storage/temp/
-  chmod -R 775 /usr/share/nginx/html/storage/temp/
-
+if [ ! -d /october-db-pw.txt ]; then
   #mysql has to be started this way as it doesn't work to call from /etc/init.d
   /usr/bin/mysqld_safe & 
   sleep 10s
